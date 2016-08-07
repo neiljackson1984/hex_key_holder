@@ -7,42 +7,85 @@
         "widthAcrossFlats": 6,
         "shortLegLength": 40,
         "longLegLength": 100,
-        "bendRadius": 18
+        "bendRadius": 18,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKey1": {
         "widthAcrossFlats": 1,
         "shortLegLength": 6.6666666666667,
         "longLegLength": 16.666666666667,
-        "bendRadius": 3
+        "bendRadius": 3,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKey2": {
         "widthAcrossFlats": 2,
         "shortLegLength": 13.333333333333,
         "longLegLength": 33.333333333333,
-        "bendRadius": 6
+        "bendRadius": 6,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKey3": {
         "widthAcrossFlats": 3,
         "shortLegLength": 20,
         "longLegLength": 50,
-        "bendRadius": 9
+        "bendRadius": 9,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKey4": {
         "widthAcrossFlats": 4,
         "shortLegLength": 26.666666666667,
         "longLegLength": 66.666666666667,
-        "bendRadius": 12
+        "bendRadius": 12,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKey5": {
         "widthAcrossFlats": 5,
         "shortLegLength": 33.333333333333,
         "longLegLength": 83.333333333333,
-        "bendRadius": 15
+        "bendRadius": 15,
+        "holsterHoleDiameter": 10,
+        "extraVerticalSlotDepth": 2,
+        "totalSlotDepth": 8,
+        "embedmentY": 20,
+        "embedmentZ": 50,
+        "holderExtentX": 25,
+        "funnelFilletRadius": 5
     },
     "hexKeyHolder": {
         "hexKeysIntervalX": 30,
-        "hexKeysCount": 10,
-        "hexKeysSpanX": 270
+        "hexKeysCount": 7,
+        "hexKeysSpanX": 180,
+        "mountingSurfaceOffset": 20
     },
     "php_errormsg": "Creating default object from empty value"
 }
