@@ -1,0 +1,48 @@
+{
+    "mm": 1,
+    "inch": 25.4,
+    "degree": 1,
+    "radian": 57.295779513082,
+    "defaultHexKey": {
+        "widthAcrossFlats": 6,
+        "shortLegLength": 40,
+        "longLegLength": 100,
+        "bendRadius": 18
+    },
+    "hexKey1": {
+        "widthAcrossFlats": 1,
+        "shortLegLength": 6.6666666666667,
+        "longLegLength": 16.666666666667,
+        "bendRadius": 3
+    },
+    "hexKey2": {
+        "widthAcrossFlats": 2,
+        "shortLegLength": 13.333333333333,
+        "longLegLength": 33.333333333333,
+        "bendRadius": 6
+    },
+    "hexKey3": {
+        "widthAcrossFlats": 3,
+        "shortLegLength": 20,
+        "longLegLength": 50,
+        "bendRadius": 9
+    },
+    "hexKey4": {
+        "widthAcrossFlats": 4,
+        "shortLegLength": 26.666666666667,
+        "longLegLength": 66.666666666667,
+        "bendRadius": 12
+    },
+    "hexKey5": {
+        "widthAcrossFlats": 5,
+        "shortLegLength": 33.333333333333,
+        "longLegLength": 83.333333333333,
+        "bendRadius": 15
+    },
+    "hexKeyHolder": {
+        "hexKeysIntervalX": 30,
+        "hexKeysCount": 10,
+        "hexKeysSpanX": 270
+    },
+    "php_errormsg": "Creating default object from empty value"
+}
