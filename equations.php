@@ -9,59 +9,156 @@ $inch = 25.4 * $mm;
 $degree = 1;
 $radian = 180/pi();
 
-$defaultHexKey->widthAcrossFlats = 6 * $mm;
-$defaultHexKey->shortLegLength = 40 * $mm;
-$defaultHexKey->longLegLength = 100 * $mm;
-$defaultHexKey->bendRadius = 18 * $mm;
-$defaultHexKey->holsterHoleDiameter = 10 * $mm;
-$defaultHexKey->extraVerticalSlotDepth = 2 * $mm;
-$defaultHexKey->totalSlotDepth = 8 * $mm;
-$defaultHexKey->embedmentY = 20 * $mm;
-$defaultHexKey->embedmentZ = 50 * $mm;
-$defaultHexKey->holderExtentX = 25 * $mm;
-$defaultHexKey->funnelFilletRadius = 5 * $mm; //we are guaranteed to be safe if we keep this less than 1/2 * (totalSlotDepth - extraVerticalSlotDepth);
 
-// $hexKeys = 
-// [
-	// clone $defaultHexKey,
-	// clone $defaultHexKey,
-	// clone $defaultHexKey,
-	// clone $defaultHexKey
+
+
+class hexKey {
+	public $widthAcrossFlats;
+	public $shortLegLength;
+	public $longLegLength;
+	public $bendRadius;
+	public $nominalSize; //this is a string
 	
-// ];
+	public function __construct(
+		$widthAcrossFlats   = null,
+		$nominalSize        = null,
+		$bendRadius         = null,
+		$shortLegLength     = null,
+		$longLegLength      = null
+	)
+	{
+		global $mm, $inch, $degree, $radian;
+		// $this->XXX = (!is_null($XXX) ? $XXX :
+			// defaultValueOfXXX //default value of $XXX
+		// );	
+		
+		$defaultWidthAcrossFlats = 6 * $mm;
+		$this->widthAcrossFlats = (!is_null($widthAcrossFlats) ? $widthAcrossFlats :
+			$defaultWidthAcrossFlats //default value of $widthAcrossFlats
+		);	
+		
+		$scaleFactor = $this->widthAcrossFlats / $defaultWidthAcrossFlats;
+				
+		$this->shortLegLength = (!is_null($shortLegLength) ? $shortLegLength :
+			$scaleFactor * 40 * $mm //default value of $shortLegLength
+		);	
+		
+		$this->longLegLength = (!is_null($longLegLength) ? $longLegLength :
+			$scaleFactor * 100 * $mm //default value of $longLegLength
+		);	
+		
+		$this->bendRadius = (!is_null($bendRadius) ? $bendRadius :
+			$scaleFactor * 18 * $mm //default value of $bendRadius
+		);	
+		
+		$this->nominalSize = (!is_null($nominalSize) ? $nominalSize :
+			$this->nominalSize    = round($this->widthAcrossFlats/$mm, 1) . " mm" //default value of $nominalSize
+		);	
+	}
+}
 
-$hexKey1 = clone $defaultHexKey;
-$hexKey2 = clone $defaultHexKey;
-$hexKey3 = clone $defaultHexKey;
-$hexKey4 = clone $defaultHexKey;
-$hexKey5 = clone $defaultHexKey;
+class hexKeyHolderSegment {
+	public $hexKey;
+	public $holsterHoleDiameter;
+	public $extraVerticalSlotDepth;
+	public $totalSlotDepth;
+	public $embedmentY;
+	public $embedmentZ;
+	public $holderExtentX;
+	public $funnelFilletRadius;
+	public $textEngravingDepth;
+	public $supportY;
+	public $supportZ;
+	public $overhangRadius;
+	public $funnelDraftAngle;
+	
+	public function __construct(
+		$hexKey                    = null, 
+		$holsterHoleDiameter       = null,
+		$extraVerticalSlotDepth    = null,
+		$totalSlotDepth            = null,
+		$embedmentY                = null,
+		$embedmentZ                = null,
+		$extentX                   = null,
+		$funnelFilletRadius        = null,
+		$textEngravingDepth        = null,
+		$supportY                  = null,
+		$supportZ                  = null,
+		$overhangRadius            = null,
+		$funnelDraftAngle          = null
+	)
+	{
+		global $mm, $inch, $degree, $radian;
+		$this->hexKey = (!is_null($hexKey) ? clone $hexKey :
+			new hexKey() //default value of $hexKey		
+		);	
+		
+		$defaultHexKey = new hexKey();
+		$scaleFactor = $this->hexKey->widthAcrossFlats / $defaultHexKey->widthAcrossFlats;
+		
+		$this->holsterHoleDiameter = (!is_null($holsterHoleDiameter) ? $holsterHoleDiameter :
+			$scaleFactor * 10 * $mm //default value of $holsterHoleDiameter
+		);	
+				
+		$this->extraVerticalSlotDepth = (!is_null($extraVerticalSlotDepth) ? $extraVerticalSlotDepth :
+			$scaleFactor * 2 * $mm //default value of $extraVerticalSlotDepth
+		);	
+				
+		$this->totalSlotDepth = (!is_null($totalSlotDepth) ? $totalSlotDepth :
+			$scaleFactor * 8 * $mm //default value of $totalSlotDepth
+		);	
+				
+		$this->embedmentY = (!is_null($embedmentY) ? $embedmentY :
+			$scaleFactor * 20 * $mm //default value of $embedmentY
+		);	
+				
+		$this->embedmentZ = (!is_null($embedmentZ) ? $embedmentZ :
+			$scaleFactor * 50 * $mm //default value of $embedmentZ
+		);	
+				
+		$this->extentX = (!is_null($extentX) ? $extentX :
+			$scaleFactor * 25 * $mm //default value of $extentX
+		);	
+				
+		$this->funnelFilletRadius = (!is_null($funnelFilletRadius) ? $funnelFilletRadius : 
+			0.95 * 1/2 * ($this->totalSlotDepth - $this->extraVerticalSlotDepth)  //default value of $funnelFilletRadius
+		);	//we are guaranteed to be safe if we keep this less than 1/2 * (totalSlotDepth - extraVerticalSlotDepth);
+			
+		$this->textEngravingDepth = (!is_null($textEngravingDepth) ? $textEngravingDepth :
+			0.4 * $mm //default value of $textEngravingDepth
+		);
+		
+		$this->supportY = (!is_null($supportY) ? $supportY :
+			$scaleFactor * 8 * $mm //default value of $supportY
+		);	
+		
+		$this->supportZ = (!is_null($supportZ) ? $supportZ :
+			$scaleFactor * 8 * $mm //default value of $supportZ
+		);	
+		
+		$this->overhangRadius = (!is_null($overhangRadius) ? $overhangRadius :
+			$scaleFactor * 5 * $mm //default value of $overhangRadius
+		);		
+		
+		$this->funnelDraftAngle = (!is_null($funnelDraftAngle) ? $funnelDraftAngle :
+			16 * $degree //default value of $funnelDraftAngle
+		);	
+		
+		// $this->XXX = (!is_null($XXX) ? $XXX :
+			// defaultValueOfXXX //default value of $XXX
+		// );	
 
-$hexKey1->widthAcrossFlats = 1 * $mm;
-$hexKey2->widthAcrossFlats = 2 * $mm;
-$hexKey3->widthAcrossFlats = 3 * $mm;
-$hexKey4->widthAcrossFlats = 4 * $mm;
-$hexKey5->widthAcrossFlats = 5 * $mm;
-
-$hexKey1->shortLegLength = $hexKey1->widthAcrossFlats * ($defaultHexKey->shortLegLength / $defaultHexKey->widthAcrossFlats);
-$hexKey2->shortLegLength = $hexKey2->widthAcrossFlats * ($defaultHexKey->shortLegLength / $defaultHexKey->widthAcrossFlats);
-$hexKey3->shortLegLength = $hexKey3->widthAcrossFlats * ($defaultHexKey->shortLegLength / $defaultHexKey->widthAcrossFlats);
-$hexKey4->shortLegLength = $hexKey4->widthAcrossFlats * ($defaultHexKey->shortLegLength / $defaultHexKey->widthAcrossFlats);
-$hexKey5->shortLegLength = $hexKey5->widthAcrossFlats * ($defaultHexKey->shortLegLength / $defaultHexKey->widthAcrossFlats);
-
-$hexKey1->longLegLength  = $hexKey1->widthAcrossFlats * ($defaultHexKey->longLegLength  / $defaultHexKey->widthAcrossFlats);
-$hexKey2->longLegLength  = $hexKey2->widthAcrossFlats * ($defaultHexKey->longLegLength  / $defaultHexKey->widthAcrossFlats);
-$hexKey3->longLegLength  = $hexKey3->widthAcrossFlats * ($defaultHexKey->longLegLength  / $defaultHexKey->widthAcrossFlats);
-$hexKey4->longLegLength  = $hexKey4->widthAcrossFlats * ($defaultHexKey->longLegLength  / $defaultHexKey->widthAcrossFlats);
-$hexKey5->longLegLength  = $hexKey5->widthAcrossFlats * ($defaultHexKey->longLegLength  / $defaultHexKey->widthAcrossFlats);
-
-$hexKey1->bendRadius     = $hexKey1->widthAcrossFlats * ($defaultHexKey->bendRadius     / $defaultHexKey->widthAcrossFlats);
-$hexKey2->bendRadius     = $hexKey2->widthAcrossFlats * ($defaultHexKey->bendRadius     / $defaultHexKey->widthAcrossFlats);
-$hexKey3->bendRadius     = $hexKey3->widthAcrossFlats * ($defaultHexKey->bendRadius     / $defaultHexKey->widthAcrossFlats);
-$hexKey4->bendRadius     = $hexKey4->widthAcrossFlats * ($defaultHexKey->bendRadius     / $defaultHexKey->widthAcrossFlats);
-$hexKey5->bendRadius     = $hexKey5->widthAcrossFlats * ($defaultHexKey->bendRadius     / $defaultHexKey->widthAcrossFlats);
+	}
+	
+}
 
 
-
+$defaultHexKeyHolderSegment =  new hexKeyHolderSegment();
+$hexKeyHolderSegment1 = new hexKeyHolderSegment(new hexKey(1 * $mm));
+$hexKeyHolderSegment2 = new hexKeyHolderSegment(new hexKey(2 * $mm));
+$hexKeyHolderSegment3 = new hexKeyHolderSegment(new hexKey(3 * $mm));
+$hexKeyHolderSegment4 = new hexKeyHolderSegment(new hexKey(4 * $mm));
+$hexKeyHolderSegment5 = new hexKeyHolderSegment(new hexKey(5 * $mm));
 
 $hexKeyHolder->hexKeysIntervalX = 30 * $mm;
 $hexKeyHolder->hexKeysCount = 7;
