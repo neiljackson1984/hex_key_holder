@@ -1,0 +1,1 @@
+The contents of this profile folder were retrieved from "C:\Users\Admin\My Things\Profiles\__from_project_folder" on 2016/08/07 21:14:24.00 by "U:\2016-08-07_hex_key_holder\3dprinting\hexKeyHolder\captureProfile.bat". 
