@@ -25,200 +25,218 @@
         "funnelDraftAngle": 16,
         "labelTextHeight": 6,
         "labelString": "6\nmm",
-        "labelStrings1": "6",
-        "labelStrings2": "mm",
+        "labelStrings": [
+            "6",
+            "mm"
+        ],
         "labelPositionZ": 21.7,
         "labelTextLineInterval": 7.8
     },
-    "hexKeyHolderSegment1": {
-        "hexKey": {
-            "widthAcrossFlats": 1.5,
-            "shortLegLength": 10,
-            "longLegLength": 25,
-            "bendRadius": 4.5,
-            "nominalSize": "1.5 mm"
+    "hexKeyHolderSegments": [
+        {
+            "hexKey": {
+                "widthAcrossFlats": 1.5,
+                "shortLegLength": 10,
+                "longLegLength": 25,
+                "bendRadius": 4.5,
+                "nominalSize": "1.5 mm"
+            },
+            "holsterHoleDiameter": 1.95,
+            "extraVerticalSlotDepth": 0.5,
+            "totalSlotDepth": 2,
+            "embedmentY": 7.5,
+            "embedmentZ": 35.216666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 0.7125,
+            "textEngravingDepth": 0.4,
+            "supportY": 4.775,
+            "supportZ": 4.775,
+            "overhangRadius": 1.25,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "1.5\nmm",
+            "labelStrings": [
+                "1.5",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 1.95,
-        "extraVerticalSlotDepth": 0.5,
-        "totalSlotDepth": 2,
-        "embedmentY": 7.5,
-        "embedmentZ": 35.216666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 0.7125,
-        "textEngravingDepth": 0.4,
-        "supportY": 4.775,
-        "supportZ": 4.775,
-        "overhangRadius": 1.25,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "1.5\nmm",
-        "labelStrings1": "1.5",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment2": {
-        "hexKey": {
-            "widthAcrossFlats": 2,
-            "shortLegLength": 13.333333333333,
-            "longLegLength": 33.333333333333,
-            "bendRadius": 6,
-            "nominalSize": "2 mm"
+        {
+            "hexKey": {
+                "widthAcrossFlats": 2,
+                "shortLegLength": 13.333333333333,
+                "longLegLength": 33.333333333333,
+                "bendRadius": 6,
+                "nominalSize": "2 mm"
+            },
+            "holsterHoleDiameter": 2.6,
+            "extraVerticalSlotDepth": 0.66666666666667,
+            "totalSlotDepth": 2.6666666666667,
+            "embedmentY": 9,
+            "embedmentZ": 35.216666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 0.95,
+            "textEngravingDepth": 0.4,
+            "supportY": 5.1,
+            "supportZ": 5.1,
+            "overhangRadius": 1.6666666666667,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "2\nmm",
+            "labelStrings": [
+                "2",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 2.6,
-        "extraVerticalSlotDepth": 0.66666666666667,
-        "totalSlotDepth": 2.6666666666667,
-        "embedmentY": 9,
-        "embedmentZ": 35.216666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 0.95,
-        "textEngravingDepth": 0.4,
-        "supportY": 5.1,
-        "supportZ": 5.1,
-        "overhangRadius": 1.6666666666667,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "2\nmm",
-        "labelStrings1": "2",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment3": {
-        "hexKey": {
-            "widthAcrossFlats": 2.5,
-            "shortLegLength": 16.666666666667,
-            "longLegLength": 41.666666666667,
-            "bendRadius": 7.5,
-            "nominalSize": "2.5 mm"
+        {
+            "hexKey": {
+                "widthAcrossFlats": 2.5,
+                "shortLegLength": 16.666666666667,
+                "longLegLength": 41.666666666667,
+                "bendRadius": 7.5,
+                "nominalSize": "2.5 mm"
+            },
+            "holsterHoleDiameter": 3.25,
+            "extraVerticalSlotDepth": 0.83333333333333,
+            "totalSlotDepth": 3.3333333333333,
+            "embedmentY": 10.5,
+            "embedmentZ": 35.216666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 1.1875,
+            "textEngravingDepth": 0.4,
+            "supportY": 5.425,
+            "supportZ": 5.425,
+            "overhangRadius": 2.0833333333333,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "2.5\nmm",
+            "labelStrings": [
+                "2.5",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 3.25,
-        "extraVerticalSlotDepth": 0.83333333333333,
-        "totalSlotDepth": 3.3333333333333,
-        "embedmentY": 10.5,
-        "embedmentZ": 35.216666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 1.1875,
-        "textEngravingDepth": 0.4,
-        "supportY": 5.425,
-        "supportZ": 5.425,
-        "overhangRadius": 2.0833333333333,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "2.5\nmm",
-        "labelStrings1": "2.5",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment4": {
-        "hexKey": {
-            "widthAcrossFlats": 3,
-            "shortLegLength": 20,
-            "longLegLength": 50,
-            "bendRadius": 9,
-            "nominalSize": "3 mm"
+        {
+            "hexKey": {
+                "widthAcrossFlats": 3,
+                "shortLegLength": 20,
+                "longLegLength": 50,
+                "bendRadius": 9,
+                "nominalSize": "3 mm"
+            },
+            "holsterHoleDiameter": 3.9,
+            "extraVerticalSlotDepth": 1,
+            "totalSlotDepth": 4,
+            "embedmentY": 12,
+            "embedmentZ": 35.216666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 1.425,
+            "textEngravingDepth": 0.4,
+            "supportY": 5.75,
+            "supportZ": 5.75,
+            "overhangRadius": 2.5,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "3\nmm",
+            "labelStrings": [
+                "3",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 3.9,
-        "extraVerticalSlotDepth": 1,
-        "totalSlotDepth": 4,
-        "embedmentY": 12,
-        "embedmentZ": 35.216666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 1.425,
-        "textEngravingDepth": 0.4,
-        "supportY": 5.75,
-        "supportZ": 5.75,
-        "overhangRadius": 2.5,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "3\nmm",
-        "labelStrings1": "3",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment5": {
-        "hexKey": {
-            "widthAcrossFlats": 4,
-            "shortLegLength": 26.666666666667,
-            "longLegLength": 66.666666666667,
-            "bendRadius": 12,
-            "nominalSize": "4 mm"
+        {
+            "hexKey": {
+                "widthAcrossFlats": 4,
+                "shortLegLength": 26.666666666667,
+                "longLegLength": 66.666666666667,
+                "bendRadius": 12,
+                "nominalSize": "4 mm"
+            },
+            "holsterHoleDiameter": 5.2,
+            "extraVerticalSlotDepth": 1.3333333333333,
+            "totalSlotDepth": 5.3333333333333,
+            "embedmentY": 15,
+            "embedmentZ": 35.216666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 1.9,
+            "textEngravingDepth": 0.4,
+            "supportY": 6.4,
+            "supportZ": 6.4,
+            "overhangRadius": 3.3333333333333,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "4\nmm",
+            "labelStrings": [
+                "4",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 5.2,
-        "extraVerticalSlotDepth": 1.3333333333333,
-        "totalSlotDepth": 5.3333333333333,
-        "embedmentY": 15,
-        "embedmentZ": 35.216666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 1.9,
-        "textEngravingDepth": 0.4,
-        "supportY": 6.4,
-        "supportZ": 6.4,
-        "overhangRadius": 3.3333333333333,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "4\nmm",
-        "labelStrings1": "4",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment6": {
-        "hexKey": {
-            "widthAcrossFlats": 4.5,
-            "shortLegLength": 30,
-            "longLegLength": 75,
-            "bendRadius": 13.5,
-            "nominalSize": "4.5 mm"
+        {
+            "hexKey": {
+                "widthAcrossFlats": 4.5,
+                "shortLegLength": 30,
+                "longLegLength": 75,
+                "bendRadius": 13.5,
+                "nominalSize": "4.5 mm"
+            },
+            "holsterHoleDiameter": 5.85,
+            "extraVerticalSlotDepth": 1.5,
+            "totalSlotDepth": 6,
+            "embedmentY": 16.5,
+            "embedmentZ": 37.5,
+            "extentX": 23,
+            "funnelFilletRadius": 2.1375,
+            "textEngravingDepth": 0.4,
+            "supportY": 6.725,
+            "supportZ": 6.725,
+            "overhangRadius": 3.75,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "4.5\nmm",
+            "labelStrings": [
+                "4.5",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
         },
-        "holsterHoleDiameter": 5.85,
-        "extraVerticalSlotDepth": 1.5,
-        "totalSlotDepth": 6,
-        "embedmentY": 16.5,
-        "embedmentZ": 37.5,
-        "extentX": 23,
-        "funnelFilletRadius": 2.1375,
-        "textEngravingDepth": 0.4,
-        "supportY": 6.725,
-        "supportZ": 6.725,
-        "overhangRadius": 3.75,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "4.5\nmm",
-        "labelStrings1": "4.5",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
-    "hexKeyHolderSegment7": {
-        "hexKey": {
-            "widthAcrossFlats": 5,
-            "shortLegLength": 33.333333333333,
-            "longLegLength": 83.333333333333,
-            "bendRadius": 15,
-            "nominalSize": "5 mm"
-        },
-        "holsterHoleDiameter": 6.5,
-        "extraVerticalSlotDepth": 1.6666666666667,
-        "totalSlotDepth": 6.6666666666667,
-        "embedmentY": 18,
-        "embedmentZ": 41.666666666667,
-        "extentX": 23,
-        "funnelFilletRadius": 2.375,
-        "textEngravingDepth": 0.4,
-        "supportY": 7.05,
-        "supportZ": 7.05,
-        "overhangRadius": 4.1666666666667,
-        "funnelDraftAngle": 16,
-        "labelTextHeight": 6,
-        "labelString": "5\nmm",
-        "labelStrings1": "5",
-        "labelStrings2": "mm",
-        "labelPositionZ": 20.216666666667,
-        "labelTextLineInterval": 7.8
-    },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 5,
+                "shortLegLength": 33.333333333333,
+                "longLegLength": 83.333333333333,
+                "bendRadius": 15,
+                "nominalSize": "5 mm"
+            },
+            "holsterHoleDiameter": 6.5,
+            "extraVerticalSlotDepth": 1.6666666666667,
+            "totalSlotDepth": 6.6666666666667,
+            "embedmentY": 18,
+            "embedmentZ": 41.666666666667,
+            "extentX": 23,
+            "funnelFilletRadius": 2.375,
+            "textEngravingDepth": 0.4,
+            "supportY": 7.05,
+            "supportZ": 7.05,
+            "overhangRadius": 4.1666666666667,
+            "funnelDraftAngle": 16,
+            "labelTextHeight": 6,
+            "labelString": "5\nmm",
+            "labelStrings": [
+                "5",
+                "mm"
+            ],
+            "labelPositionZ": 20.216666666667,
+            "labelTextLineInterval": 7.8
+        }
+    ],
     "largestHexKeyHolderSegment": {
         "hexKey": {
             "widthAcrossFlats": 5,
@@ -241,8 +259,10 @@
         "funnelDraftAngle": 16,
         "labelTextHeight": 6,
         "labelString": "5\nmm",
-        "labelStrings1": "5",
-        "labelStrings2": "mm",
+        "labelStrings": [
+            "5",
+            "mm"
+        ],
         "labelPositionZ": 20.216666666667,
         "labelTextLineInterval": 7.8
     },
@@ -268,29 +288,169 @@
         "funnelDraftAngle": 16,
         "labelTextHeight": 6,
         "labelString": "1.5\nmm",
-        "labelStrings1": "1.5",
-        "labelStrings2": "mm",
+        "labelStrings": [
+            "1.5",
+            "mm"
+        ],
         "labelPositionZ": 20.216666666667,
         "labelTextLineInterval": 7.8
     },
     "hexKeyHolder": {
+        "hexKeysIntervalX": 25,
+        "hexKeysCount": 7,
+        "hexKeysSpanX": 150,
         "mountHoles": {
+            "clampingMeatThickness": 10,
             "screw": {
                 "clearanceDiameter": 4,
                 "headClearanceDiameter": 10,
                 "counterSinkAngle": 90
             },
             "positionZ": 16.216666666667,
-            "clampingMeatThickness": 10,
-            "intervalX": 125
+            "positions": [
+                {
+                    "x": 118.75
+                },
+                {
+                    "x": 306.25
+                }
+            ]
         },
-        "hexKeysIntervalX": 25,
-        "hexKeysCount": 7,
-        "hexKeysSpanX": 150,
-        "mountingSurfaceOffset": 8.35
+        "mountingSurfaceOffset": 8.35,
+        "maximumAllowedNumberOfSegments": 32,
+        "segmentPositions": [
+            {
+                "x": 100
+            },
+            {
+                "x": 137.5
+            },
+            {
+                "x": 175
+            },
+            {
+                "x": 212.5
+            },
+            {
+                "x": 250
+            },
+            {
+                "x": 287.5
+            },
+            {
+                "x": 325
+            },
+            {
+                "x": 362.5
+            },
+            {
+                "x": 400
+            },
+            {
+                "x": 437.5
+            },
+            {
+                "x": 475
+            },
+            {
+                "x": 512.5
+            },
+            {
+                "x": 550
+            },
+            {
+                "x": 587.5
+            },
+            {
+                "x": 625
+            },
+            {
+                "x": 662.5
+            },
+            {
+                "x": 700
+            },
+            {
+                "x": 737.5
+            },
+            {
+                "x": 775
+            },
+            {
+                "x": 812.5
+            },
+            {
+                "x": 850
+            },
+            {
+                "x": 887.5
+            },
+            {
+                "x": 925
+            },
+            {
+                "x": 962.5
+            },
+            {
+                "x": 1000
+            },
+            {
+                "x": 1037.5
+            },
+            {
+                "x": 1075
+            },
+            {
+                "x": 1112.5
+            },
+            {
+                "x": 1150
+            },
+            {
+                "x": 1187.5
+            },
+            {
+                "x": 1225
+            },
+            {
+                "x": 1262.5
+            }
+        ],
+        "xMax": 336.5
     },
     "commonLabelPositionZ": 20.216666666667,
     "commonMinimumAllowedEmbedmentZ": 35.216666666667,
     "commonExtentX": 23,
+    "hexKeyHolderSegment": {
+        "hexKey": {
+            "widthAcrossFlats": 5,
+            "shortLegLength": 33.333333333333,
+            "longLegLength": 83.333333333333,
+            "bendRadius": 15,
+            "nominalSize": "5 mm"
+        },
+        "holsterHoleDiameter": 6.5,
+        "extraVerticalSlotDepth": 1.6666666666667,
+        "totalSlotDepth": 6.6666666666667,
+        "embedmentY": 18,
+        "embedmentZ": 41.666666666667,
+        "extentX": 23,
+        "funnelFilletRadius": 2.375,
+        "textEngravingDepth": 0.4,
+        "supportY": 7.05,
+        "supportZ": 7.05,
+        "overhangRadius": 4.1666666666667,
+        "funnelDraftAngle": 16,
+        "labelTextHeight": 6,
+        "labelString": "5\nmm",
+        "labelStrings": [
+            "5",
+            "mm"
+        ],
+        "labelPositionZ": 20.216666666667,
+        "labelTextLineInterval": 7.8
+    },
+    "arbitraryOffset": 100,
+    "i": 32,
     "php_errormsg": "Creating default object from empty value"
 }

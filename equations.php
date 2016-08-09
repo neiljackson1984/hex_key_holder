@@ -73,8 +73,7 @@ class hexKeyHolderSegment {
 	public $funnelDraftAngle;
 	public $labelTextHeight;  //can't drive text height, so this requires manual updating between externalParameters and solidworks model.
 	public $labelString;
-	public $labelStrings1;
-	public $labelStrings2;
+	public $labelStrings;
 	public $labelPositionZ;
 	public $labelTextLineInterval;
 	
@@ -95,8 +94,7 @@ class hexKeyHolderSegment {
 		$labelTextHeight           = null,
 		$labelTextLineInterval     = null,
 		$labelString               = null,
-		$labelStrings1             = null,
-		$labelStrings2             = null,
+		$labelStrings              = null,
 		$labelPositionZ            = null
 	)
 	{
@@ -168,6 +166,7 @@ class hexKeyHolderSegment {
 			16 * $degree //default value of $funnelDraftAngle
 		);	
 		
+		//there is no dynamic updatng of the height of the solidworks sketch text -- this has to be updated manually in solidworks.
 		$this->labelTextHeight = (!is_null($labelTextHeight) ? $labelTextHeight :
 			6 * $mm //default value of $labelTextHeight
 		);	
@@ -182,21 +181,14 @@ class hexKeyHolderSegment {
 			round($this->hexKey->widthAcrossFlats/$mm, 1) . "\n" . "mm"  //default value of $labelString
 		);	
 		
-		$this->labelStrings1 = (!is_null($labelStrings1) ? $labelStrings1 :
-			explode("\n", $this->labelString)[0]  //default value of $labelStrings1
-		);	
-		
-		$this->labelStrings2 = (!is_null($labelStrings2) ? $labelStrings2 :
-			explode("\n", $this->labelString)[1]  //default value of $labelStrings1
-		);	
-		
-		// $PRP:"externalParameters.this.labelStrings1"
-		// $PRP:"externalParameters.this.labelStrings2"
-		
 		//this is what we really want to do, once we fix the property importer to something reasonable with arrays in the json data.
-		// // $this->labelStrings = (!is_null($labelStrings) ? $labelStrings :
-			// // explode("\n", $this->labelStrings)  //default value of $labelStrings1
-		// // );	
+		$this->labelStrings = (!is_null($labelStrings) ? $labelStrings :
+			explode("\n", $this->labelString)  //default value of $labelStrings1
+		);	
+	
+		// Use these codes in the Solidworks text entry field to get the lines of text for the label:
+		// $PRP:"externalParameters.this.labelStrings[0]"
+		// $PRP:"externalParameters.this.labelStrings[1]"
 		
 
 		// // // //$this->labelStyle = '"<FONT color=D><FONT name=""Century Gothic"" size=5PTS style=RB effect=RU>';
@@ -219,47 +211,23 @@ class hexKeyHolderSegment {
 	}
 }
 
-
-
 $defaultHexKeyHolderSegment =  new hexKeyHolderSegment();
-$hexKeyHolderSegment1 = new hexKeyHolderSegment(new hexKey(1.5 * $mm));
-$hexKeyHolderSegment2 = new hexKeyHolderSegment(new hexKey(2 * $mm));
-$hexKeyHolderSegment3 = new hexKeyHolderSegment(new hexKey(2.5 * $mm));
-$hexKeyHolderSegment4 = new hexKeyHolderSegment(new hexKey(3 * $mm));
-$hexKeyHolderSegment5 = new hexKeyHolderSegment(new hexKey(4 * $mm));
-$hexKeyHolderSegment6 = new hexKeyHolderSegment(new hexKey(4.5 * $mm));
-$hexKeyHolderSegment7 = new hexKeyHolderSegment(new hexKey(5 * $mm));
+$hexKeyHolderSegments = 
+	[
+		new hexKeyHolderSegment(new hexKey(1.5 * $mm)),
+		new hexKeyHolderSegment(new hexKey(2 * $mm)),
+		new hexKeyHolderSegment(new hexKey(2.5 * $mm)),
+		new hexKeyHolderSegment(new hexKey(3 * $mm)),
+		new hexKeyHolderSegment(new hexKey(4 * $mm)),
+		new hexKeyHolderSegment(new hexKey(4.5 * $mm)),
+		new hexKeyHolderSegment(new hexKey(5 * $mm))
+	];
 
-$largestHexKeyHolderSegment = $hexKeyHolderSegment7;
-$smallestHexKeyHolderSegment = $hexKeyHolderSegment1;
-
-$hexKeyHolder->mountHoles->screw->clearanceDiameter = 4 * $mm;
-$hexKeyHolder->mountHoles->screw->headClearanceDiameter = 10 * $mm;
-$hexKeyHolder->mountHoles->screw->counterSinkAngle = 90 * $degree;
-$hexKeyHolder->mountHoles->positionZ = $largestHexKeyHolderSegment->supportZ + $largestHexKeyHolderSegment->overhangRadius + $hexKeyHolder->mountHoles->screw->headClearanceDiameter/2; 
-
-$commonLabelPositionZ = $largestHexKeyHolderSegment->labelPositionZ;
-
-$hexKeyHolderSegment1->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment2->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment3->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment4->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment5->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment6->labelPositionZ = $commonLabelPositionZ;
-$hexKeyHolderSegment7->labelPositionZ = $commonLabelPositionZ;
-
-$commonMinimumAllowedEmbedmentZ = $commonLabelPositionZ + 2.5*$defaultHexKeyHolderSegment->labelTextHeight;
-
-$hexKeyHolderSegment1->embedmentZ = max($hexKeyHolderSegment1->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment2->embedmentZ = max($hexKeyHolderSegment2->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment3->embedmentZ = max($hexKeyHolderSegment3->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment4->embedmentZ = max($hexKeyHolderSegment4->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment5->embedmentZ = max($hexKeyHolderSegment5->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment6->embedmentZ = max($hexKeyHolderSegment6->embedmentZ, $commonMinimumAllowedEmbedmentZ);
-$hexKeyHolderSegment7->embedmentZ = max($hexKeyHolderSegment7->embedmentZ, $commonMinimumAllowedEmbedmentZ);
+$largestHexKeyHolderSegment = $hexKeyHolderSegments[count($hexKeyHolderSegments) - 1];
+$smallestHexKeyHolderSegment = $hexKeyHolderSegments[0];
 
 $hexKeyHolder->hexKeysIntervalX = 25 * $mm;
-$hexKeyHolder->hexKeysCount = 7;
+$hexKeyHolder->hexKeysCount = count($hexKeyHolderSegments);
 $hexKeyHolder->hexKeysSpanX = $hexKeyHolder->hexKeysIntervalX * ($hexKeyHolder->hexKeysCount - 1);
 $hexKeyHolder->mountHoles->clampingMeatThickness = 10 * $mm;
 $hexKeyHolder->mountingSurfaceOffset = 
@@ -269,17 +237,51 @@ $hexKeyHolder->mountingSurfaceOffset =
 	)
 	+ 1.3 * $mm; //a hack
 
-$hexKeyHolder->mountHoles->intervalX = $hexKeyHolder->hexKeysSpanX - $hexKeyHolder->hexKeysIntervalX;
 
 
+$hexKeyHolder->mountHoles->screw->clearanceDiameter = 4 * $mm;
+$hexKeyHolder->mountHoles->screw->headClearanceDiameter = 10 * $mm;
+$hexKeyHolder->mountHoles->screw->counterSinkAngle = 90 * $degree;
+$hexKeyHolder->mountHoles->positionZ = $largestHexKeyHolderSegment->supportZ + $largestHexKeyHolderSegment->overhangRadius + $hexKeyHolder->mountHoles->screw->headClearanceDiameter/2; 
+
+$commonLabelPositionZ = $largestHexKeyHolderSegment->labelPositionZ;
+$commonMinimumAllowedEmbedmentZ = $commonLabelPositionZ + 2.5*$defaultHexKeyHolderSegment->labelTextHeight; // allows enough height for the land on which to engraved text.
 $commonExtentX = $hexKeyHolder->hexKeysIntervalX-2*$mm;
-$hexKeyHolderSegment1->extentX = $commonExtentX;
-$hexKeyHolderSegment2->extentX = $commonExtentX;
-$hexKeyHolderSegment3->extentX = $commonExtentX;
-$hexKeyHolderSegment4->extentX = $commonExtentX;
-$hexKeyHolderSegment5->extentX = $commonExtentX;
-$hexKeyHolderSegment6->extentX = $commonExtentX;
-$hexKeyHolderSegment7->extentX = $commonExtentX;
+foreach($hexKeyHolderSegments as $hexKeyHolderSegment)
+{
+	$hexKeyHolderSegment->labelPositionZ = $commonLabelPositionZ;
+	$hexKeyHolderSegment->embedmentZ = max($hexKeyHolderSegment->embedmentZ, $commonMinimumAllowedEmbedmentZ);
+	$hexKeyHolderSegment->extentX = $commonExtentX;
+}
+
+$hexKeyHolder->maximumAllowedNumberOfSegments = 32; //This is the number of configurations I have made in the hexKeyHolderSegment.sldprt file (and the number of points I have put into the positioning sketch).  The process to make these configurations is and sketch points is manual, and the number of configs determines the maximum number of segments that we can have.
+
+$hexKeyHolder->segmentPositions = [];
+$arbitraryOffset = 100 * $mm; //we add this to keep all coordinates positive.
+for($i = 0; $i < $hexKeyHolder->maximumAllowedNumberOfSegments; $i++)
+{
+	//$hexKeyHolder->segmentPositions[$i] = $i * $hexKeyHolder->hexKeysIntervalX + $arbitraryOffset;
+	//$hexKeyHolder->segmentPositions[$i] = new stdclass;
+	$hexKeyHolder->segmentPositions[$i]->x = $i * (1.5 /*temp hack*/ * $hexKeyHolder->hexKeysIntervalX) + $arbitraryOffset;
+}
+
+$hexKeyHolder->xMax = $hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 1]->x + ($hexKeyHolderSegments[count($hexKeyHolderSegments) - 1]->extentX)/2;
+
+//the first mount hole will go halfway between the edges of the first and second segments
+$hexKeyHolder->mountHoles->positions[0]->x = 
+	(
+		$hexKeyHolder->segmentPositions[0    ]->x   + $hexKeyHolderSegments[0    ]->extentX/2
+		+
+		$hexKeyHolder->segmentPositions[0 + 1]->x   - $hexKeyHolderSegments[0 + 1]->extentX/2
+	)/2 ;
+	
+//the second mount hole will go halfway between the edges of the penultimate and last segments
+$hexKeyHolder->mountHoles->positions[1]->x = 
+	(
+		$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 2]->x   + $hexKeyHolderSegments[count($hexKeyHolderSegments) - 2]->extentX/2
+		+
+		$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 1]->x   - $hexKeyHolderSegments[count($hexKeyHolderSegments) - 1]->extentX/2
+	)/2 ;
 
 
 ?>
