@@ -129,7 +129,7 @@ class hexKeyHolderSegment {
 		);	//we are guaranteed to be safe if we keep this less than 1/2 * (totalSlotDepth - extraVerticalSlotDepth);
 			
 		$this->textEngravingDepth = (!is_null($textEngravingDepth) ? $textEngravingDepth :
-			0.4 * $mm //default value of $textEngravingDepth
+			0.6 * $mm //default value of $textEngravingDepth
 		);
 		
 		$this->supportY = (!is_null($supportY) ? $supportY :
@@ -168,7 +168,7 @@ class hexKeyHolderSegment {
 		
 		//there is no dynamic updatng of the height of the solidworks sketch text -- this has to be updated manually in solidworks.
 		$this->labelTextHeight = (!is_null($labelTextHeight) ? $labelTextHeight :
-			6 * $mm //default value of $labelTextHeight
+			5 * $mm //default value of $labelTextHeight
 		);	
 		
 		// $this->labelString = (!is_null($labelString) ? $labelString :
@@ -218,9 +218,17 @@ $hexKeyHolderSegments =
 		new hexKeyHolderSegment(new hexKey(2 * $mm)),
 		new hexKeyHolderSegment(new hexKey(2.5 * $mm)),
 		new hexKeyHolderSegment(new hexKey(3 * $mm)),
+		new hexKeyHolderSegment(new hexKey(3.5 * $mm)),
 		new hexKeyHolderSegment(new hexKey(4 * $mm)),
 		new hexKeyHolderSegment(new hexKey(4.5 * $mm)),
-		new hexKeyHolderSegment(new hexKey(5 * $mm))
+		new hexKeyHolderSegment(new hexKey(5 * $mm)),
+		new hexKeyHolderSegment(new hexKey(5.5 * $mm)),
+		new hexKeyHolderSegment(new hexKey(6 * $mm)),
+		new hexKeyHolderSegment(new hexKey(7 * $mm)),
+		new hexKeyHolderSegment(new hexKey(8 * $mm)),
+		new hexKeyHolderSegment(new hexKey(9 * $mm)),
+		new hexKeyHolderSegment(new hexKey(10 * $mm))
+
 	];
 
 $largestHexKeyHolderSegment = $hexKeyHolderSegments[count($hexKeyHolderSegments) - 1];
@@ -245,7 +253,11 @@ $hexKeyHolder->mountHoles->screw->counterSinkAngle = 90 * $degree;
 $hexKeyHolder->mountHoles->positionZ = $largestHexKeyHolderSegment->supportZ + $largestHexKeyHolderSegment->overhangRadius + $hexKeyHolder->mountHoles->screw->headClearanceDiameter/2; 
 
 $commonLabelPositionZ = $largestHexKeyHolderSegment->labelPositionZ;
-$commonMinimumAllowedEmbedmentZ = $commonLabelPositionZ + 2.5*$defaultHexKeyHolderSegment->labelTextHeight; // allows enough height for the land on which to engraved text.
+$commonMinimumAllowedEmbedmentZ = // allows enough height for the land on which to engraved text.
+	$commonLabelPositionZ + 
+	((2 /*number of lines of text*/ ) -1) * $defaultHexKeyHolderSegment->labelTextLineInterval +
+	+ 0.5 * $defaultHexKeyHolderSegment->labelTextHeight;
+ 
 $commonExtentX = $hexKeyHolder->hexKeysIntervalX-2*$mm;
 foreach($hexKeyHolderSegments as $hexKeyHolderSegment)
 {
@@ -262,26 +274,28 @@ for($i = 0; $i < $hexKeyHolder->maximumAllowedNumberOfSegments; $i++)
 {
 	//$hexKeyHolder->segmentPositions[$i] = $i * $hexKeyHolder->hexKeysIntervalX + $arbitraryOffset;
 	//$hexKeyHolder->segmentPositions[$i] = new stdclass;
-	$hexKeyHolder->segmentPositions[$i]->x = $i * (1.5 /*temp hack*/ * $hexKeyHolder->hexKeysIntervalX) + $arbitraryOffset;
+	$hexKeyHolder->segmentPositions[$i]->x = $i * ($hexKeyHolder->hexKeysIntervalX) + $arbitraryOffset;
 }
 
 $hexKeyHolder->xMax = $hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 1]->x + ($hexKeyHolderSegments[count($hexKeyHolderSegments) - 1]->extentX)/2;
 
-//the first mount hole will go halfway between the edges of the first and second segments
-$hexKeyHolder->mountHoles->positions[0]->x = 
-	(
-		$hexKeyHolder->segmentPositions[0    ]->x   + $hexKeyHolderSegments[0    ]->extentX/2
-		+
-		$hexKeyHolder->segmentPositions[0 + 1]->x   - $hexKeyHolderSegments[0 + 1]->extentX/2
-	)/2 ;
-	
-//the second mount hole will go halfway between the edges of the penultimate and last segments
-$hexKeyHolder->mountHoles->positions[1]->x = 
-	(
-		$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 2]->x   + $hexKeyHolderSegments[count($hexKeyHolderSegments) - 2]->extentX/2
-		+
-		$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 1]->x   - $hexKeyHolderSegments[count($hexKeyHolderSegments) - 1]->extentX/2
-	)/2 ;
+{// set mount hole positions
+	//the first mount hole will go halfway between the edges of the first and second segments
+	$hexKeyHolder->mountHoles->positions[0]->x = 
+		(
+			$hexKeyHolder->segmentPositions[0    ]->x   + $hexKeyHolderSegments[0    ]->extentX/2
+			+
+			$hexKeyHolder->segmentPositions[0 + 1]->x   - $hexKeyHolderSegments[0 + 1]->extentX/2
+		)/2 ;
+		
+	//the second mount hole will go halfway between the edges of the penultimate and last segments
+	$hexKeyHolder->mountHoles->positions[1]->x = 
+		(
+			$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 2]->x   + $hexKeyHolderSegments[count($hexKeyHolderSegments) - 2]->extentX/2
+			+
+			$hexKeyHolder->segmentPositions[count($hexKeyHolderSegments) - 1]->x   - $hexKeyHolderSegments[count($hexKeyHolderSegments) - 1]->extentX/2
+		)/2 ;
+}
 
 
 ?>
