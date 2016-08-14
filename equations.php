@@ -101,7 +101,7 @@ class hexKeyHolderSegment extends properties
 	public $supportY;
 	public $supportZ;
 	public $funnelDraftAngle;
-	public $labelTextHeight;  //can't drive text height, so this requires manual updating between externalParameters and solidworks model.
+	public $labelTextHeights;  //can't drive text height, so this requires manual updating between externalParameters and solidworks model.
 	public $labelString;
 	public $reservedTextWidth;
 	public $mountingSurfaceOffset;
@@ -161,6 +161,7 @@ class hexKeyHolderSegment extends properties
 	public function __construct(
 		$hexKey                    = null, 
 		$labelString               = null,
+		$labelTextHeights          = null,
 		$reservedTextWidth         = null,
 		$holsterHoleDiameter       = null,
 		$extraVerticalSlotDepth    = null,
@@ -173,7 +174,6 @@ class hexKeyHolderSegment extends properties
 		$supportY                  = null,
 		$supportZ                  = null,
 		$funnelDraftAngle          = null,
-		$labelTextHeight           = null,
 		$labelTextLineInterval     = null,
 		$labelPositionZ            = null,
 		$mountingSurfaceOffset     = null
@@ -234,7 +234,8 @@ class hexKeyHolderSegment extends properties
 		$this->embedmentZ = (!is_null($embedmentZ) ? $embedmentZ :
 			max(
 				//$scaleFactor * 50 * $mm, //default value of $embedmentZ
-				$this->hexKey->bendRadius  +  $this->hexKey->widthAcrossFlats * 5.2,
+				//$this->hexKey->bendRadius  +  $this->hexKey->widthAcrossFlats * 5.2,
+				$this->hexKey->bendRadius  +  $this->hexKey->widthAcrossFlats * 2,
 				$this->supportZ + $this->overhangRadius + 0.1 *$mm //the '0.1' is a hack to work around solidworks's dislike of zero-length geometry
 			)
 		);	
@@ -245,10 +246,7 @@ class hexKeyHolderSegment extends properties
 			16 * $degree //default value of $funnelDraftAngle
 		);	
 		
-		//there is no dynamic updatng of the height of the solidworks sketch text -- this has to be updated manually in solidworks.
-		$this->labelTextHeight = (!is_null($labelTextHeight) ? $labelTextHeight :
-			5 * $mm //default value of $labelTextHeight
-		);	
+
 		
 		// $this->labelString = (!is_null($labelString) ? $labelString :
 			// //'<FONT color=D><FONT name="Verdana" size=6PTS>' . 
@@ -258,21 +256,41 @@ class hexKeyHolderSegment extends properties
 		
 		$this->labelString = (!is_null($labelString) ? $labelString :
 			round($this->hexKey->widthAcrossFlats/$mm, 1) . "\n" . "mm"  //default value of $labelString
+		);
+
+		//there is no dynamic updatng of the height of the solidworks sketch text -- this has to be updated manually in solidworks.
+		// $this->labelTextHeight = (!is_null($labelTextHeight) ? $labelTextHeight :
+			// 5 * $mm //default value of $labelTextHeight
+		// );	
+
+		// we allow each line of text to have potentially different height.
+		// I will use equation-driven suppression to allow this textHeight value to have effect if it is one of the few 
+		// values that I have manually set up in the suppression states.
+		$this->labelTextHeights = (!is_null($labelTextHeights) ? $labelTextHeights :
+			[5 * $mm, 5 * $mm] //default value of $labelTextHeights
 		);	
 		
 		$this->reservedTextWidth = (!is_null($reservedTextWidth) ? $reservedTextWidth :
 			//default value of $reservedTextWidth
 			max(
 				//$this->aaTester = array_map(
+				// array_map(
+					// function($x){
+						// global $mm;
+						// return 
+							// 1.45 * $this->labelTextHeight * strlen($x)
+							// + 2* 0.8 * $mm;
+					// }, //this function returns some estimation of the width of the specified line of text.  It is crude because we are not necessarily using a fixed width font, but it should at least allow us to impose a maximum possibe width.
+					// $this->labelStrings
+				// ) 
 				array_map(
-					//function($x) use ($this) {
-					function($x){
+					function($i){
 						global $mm;
 						return 
-							1.45 * $this->labelTextHeight * strlen($x)
+							1.45 * $this->labelTextHeights[$i] * strlen($this->labelStrings[$i])
 							+ 2* 0.8 * $mm;
 					}, //this function returns some estimation of the width of the specified line of text.  It is crude because we are not necessarily using a fixed width font, but it should at least allow us to impose a maximum possibe width.
-					$this->labelStrings
+					array_keys($this->labelStrings)
 				) 
 			) 
 		);	
@@ -281,18 +299,30 @@ class hexKeyHolderSegment extends properties
 		// $PRP:"externalParameters.this.labelStrings[0]"
 		// $PRP:"externalParameters.this.labelStrings[1]"
 
-		// // // //$this->labelStyle = '"<FONT color=D><FONT name=""Century Gothic"" size=5PTS style=RB effect=RU>';
+		// // // //$this->labelStyle = '"<FONT color=D><FONT name="Century Gothic" size=5PTS style=RB effect=RU>';
 		// // // $this->labelStyle = '';
 		// // // $this->labelScalingFactor = 3.12345;
 		
+		//<FONT color=D><FONT name="Times New Roman" size=10mm style=RB effect=RU>Ahoy There
+		
+		// Solidworks equations used to selectively seuppress text features based on textHeights:
+		// "labelLine0-3mm_extrude"=Iif("externalParameters.this.labelTextHeights[0]"=3mm,"unsuppressed","suppressed")
+		// "labelLine0-4mm_extrude"=Iif("externalParameters.this.labelTextHeights[0]"=4mm,"unsuppressed","suppressed")
+		// "labelLine0-5mm_extrude"=Iif("externalParameters.this.labelTextHeights[0]"=5mm,"unsuppressed","suppressed")
+		// "labelLine1-3mm_extrude"=Iif("externalParameters.this.labelTextHeights[1]"=3mm,"unsuppressed","suppressed")
+		// "labelLine1-4mm_extrude"=Iif("externalParameters.this.labelTextHeights[1]"=4mm,"unsuppressed","suppressed")
+		// "labelLine1-5mm_extrude"=Iif("externalParameters.this.labelTextHeights[1]"=5mm,"unsuppressed","suppressed")
+		//  "labelLine0_folder" = "unsuppressed"
+		//  "labelLine1_folder" = "unsuppressed"
+		
 		$this->labelPositionZ = (!is_null($labelPositionZ) ? $labelPositionZ :
 			//$this->embedmentZ - 1/2 * ($this->embedmentZ - $this->overhangRadius - $this->supportZ) // default value of $labelPositionZ
-			$this->supportZ + $this->overhangRadius  + 1.5 * $this->labelTextHeight  
+			$this->supportZ + $this->overhangRadius  + 1.5 * $this->labelTextHeights[0]  
 			
 		);	
 		
 		$this->labelTextLineInterval = (!is_null($labelTextLineInterval) ? $labelTextLineInterval :
-			1.3 * $this->labelTextHeight //default value of $labelTextLineInterval
+			1.3 * $this->labelTextHeights[1] //default value of $labelTextLineInterval
 		);	
 		
 		$this->extentX = (!is_null($extentX) ? $extentX :
@@ -310,6 +340,8 @@ class hexKeyHolderSegment extends properties
 	}
 }
 
+$labelTextHeightsForImperialSegments = [4 * $mm, 5 * $mm];
+
 $defaultHexKeyHolderSegment =  new hexKeyHolderSegment();
 $hexKeyHolderSegments = 
 	[
@@ -326,7 +358,21 @@ $hexKeyHolderSegments =
 		new hexKeyHolderSegment(new hexKey(7 * $mm)),
 		new hexKeyHolderSegment(new hexKey(8 * $mm)),
 		new hexKeyHolderSegment(new hexKey(9 * $mm)),
-		new hexKeyHolderSegment(new hexKey(10 * $mm))
+		new hexKeyHolderSegment(new hexKey(10 * $mm)),
+		
+		new hexKeyHolderSegment(new hexKey(1/20 * $inch),  "1/20" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(1/16 * $inch),  "1/16" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(5/64 * $inch),  "5/64" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(3/32 * $inch),  "3/32" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(7/64 * $inch),  "7/64" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(1/8  * $inch),  "1/8"  . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(9/64 * $inch),  "9/64" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(5/32 * $inch),  "5/32" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(3/16 * $inch),  "3/16" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(7/32 * $inch),  "7/32" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(1/4  * $inch),  "1/4"  . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(5/16 * $inch),  "5/16" . "\n" . "in"  , $labelTextHeightsForImperialSegments),
+		new hexKeyHolderSegment(new hexKey(3/8  * $inch),  "3/8 " . "\n" . "in"  , $labelTextHeightsForImperialSegments)
 	];
 
 
@@ -336,11 +382,23 @@ $hexKeyHolderSegments =
 $batchNumber = -1;
 switch($batchNumber)
 {
-	case 0:
+	case 0: //metric, smaller
 		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 0, 8);
 	break;
-	case 1:
-		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 8);
+	case 1: //metric, larger
+		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 8, 6);
+	break;
+	case 2: //metric, all
+		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 0, 14);
+	break;
+	case 3: //imperial, smaller
+		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 14, 7);
+	break;
+	case 4: //imperial, larger
+		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 21, 6);
+	break;
+	case 5: //imperial, all
+		$hexKeyHolderSegments = array_slice($hexKeyHolderSegments, 14,13);
 	break;
 	default:
 	break;
@@ -355,7 +413,7 @@ $smallestHexKeyHolderSegment = $hexKeyHolderSegments[0];
 $hexKeyHolder->hexKeysCount = count($hexKeyHolderSegments);
 //$hexKeyHolder->hexKeysSpanX = $hexKeyHolder->hexKeysIntervalX * ($hexKeyHolder->hexKeysCount - 1);
 $hexKeyHolder->mountHoles->screw->clearanceDiameter = 5 * $mm;
-$hexKeyHolder->mountHoles->screw->headClearanceDiameter = 8.4 * $mm;
+$hexKeyHolder->mountHoles->screw->headClearanceDiameter = 9 * $mm;
 
 $hexKeyHolder->mountHoles->clampingMeatThickness = 7 * $mm;
 
@@ -389,12 +447,14 @@ foreach($hexKeyHolderSegments as $hexKeyHolderSegment)
 		max($hexKeyHolderSegment->embedmentZ, 
 			$hexKeyHolderSegment->labelPositionZ + 
 			(count($hexKeyHolderSegment->labelStrings) /*number of lines of text*/ -1) * $hexKeyHolderSegment->labelTextLineInterval +
-			+ 0.5 * $hexKeyHolderSegment->labelTextHeight
+			+ 0.5 * $hexKeyHolderSegment->labelTextHeights[1]
 		);
 
 	//$hexKeyHolderSegment->extentX = $hexKeyHolder->hexKeysIntervalX-2*$mm;  //make all holderSEgments have uniform extentX.
+	
+	//this is a hack to hard code the reservedTextWidth, and have it be the same for all segments, rather than letting the text size and lenth determine reservedTextWidth.
 	$hexKeyHolderSegment->reservedTextWidth = 
-		2 * 1.45 * $defaultHexKeyHolderSegment->labelTextHeight
+		2 * 1.45 * 5 * $mm
 		+ 2* 1*$mm;
 		
 	$hexKeyHolderSegment->extentX = $hexKeyHolderSegment->get_minimumAllowedExtentX();
@@ -471,5 +531,13 @@ $hexKeyHolder->mountHoles->positionZ = -15 * $mm;
 		)/2 ;
 }
 
+
+$drillOutSizeGuide = "";
+foreach($hexKeyHolderSegments as $hexKeyHolderSegment)
+{
+	$drillOutSizeGuide .= 
+		str_replace("\n","",$hexKeyHolderSegment->labelString) . "    " . round(($hexKeyHolderSegment->holsterHoleDiameter / $inch) * 64 , 1) . "/64 inch" . "\n" . 
+		"";
+}
 
 ?>

@@ -3,6 +3,10 @@
     "inch": 25.4,
     "degree": 1,
     "radian": 57.295779513082,
+    "labelTextHeightsForImperialSegments": [
+        4,
+        5
+    ],
     "defaultHexKeyHolderSegment": {
         "hexKey": {
             "widthAcrossFlats": 6,
@@ -15,14 +19,17 @@
         "extraVerticalSlotDepth": 1.98,
         "totalSlotDepth": 7.98,
         "embedmentY": 17.26,
-        "embedmentZ": 45.66,
+        "embedmentZ": 26.46,
         "extentX": 16.1,
         "funnelFilletRadius": 2.85,
         "textEngravingDepth": 0.6,
         "supportY": 7.7,
         "supportZ": 7.7,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
+        "labelTextHeights": [
+            5,
+            5
+        ],
         "labelString": "6\nmm",
         "reservedTextWidth": 16.1,
         "mountingSurfaceOffset": 8.1681013573458,
@@ -57,7 +64,10 @@
             "supportY": 4.775,
             "supportZ": 4.775,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "1.5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 4.775,
@@ -91,7 +101,10 @@
             "supportY": 5.1,
             "supportZ": 5.1,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "2\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 5.1,
@@ -125,7 +138,10 @@
             "supportY": 5.425,
             "supportZ": 5.425,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "2.5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 5.425,
@@ -159,7 +175,10 @@
             "supportY": 5.75,
             "supportZ": 5.75,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "3\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 5.75,
@@ -186,14 +205,17 @@
             "extraVerticalSlotDepth": 1.9,
             "totalSlotDepth": 5.4,
             "embedmentY": 12.881405919662,
-            "embedmentZ": 28.281405919662,
+            "embedmentZ": 26.581405919662,
             "extentX": 16.5,
             "funnelFilletRadius": 1.6625,
             "textEngravingDepth": 0.6,
             "supportY": 6.075,
             "supportZ": 6.075,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "3.5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 6.075,
@@ -220,14 +242,17 @@
             "extraVerticalSlotDepth": 1.9,
             "totalSlotDepth": 5.9,
             "embedmentY": 13.945285412262,
-            "embedmentZ": 31.945285412262,
+            "embedmentZ": 27.645285412262,
             "extentX": 16.5,
             "funnelFilletRadius": 1.9,
             "textEngravingDepth": 0.6,
             "supportY": 6.4,
             "supportZ": 6.4,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "4\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 6.4,
@@ -254,14 +279,17 @@
             "extraVerticalSlotDepth": 1.9,
             "totalSlotDepth": 6.4,
             "embedmentY": 14.915084566596,
-            "embedmentZ": 35.515084566596,
+            "embedmentZ": 28.615084566596,
             "extentX": 16.5,
             "funnelFilletRadius": 2.1375,
             "textEngravingDepth": 0.6,
             "supportY": 6.725,
             "supportZ": 6.725,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "4.5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 6.725,
@@ -288,14 +316,17 @@
             "extraVerticalSlotDepth": 1.9,
             "totalSlotDepth": 6.9,
             "embedmentY": 15.790803382664,
-            "embedmentZ": 38.990803382664,
+            "embedmentZ": 29.490803382664,
             "extentX": 16.5,
             "funnelFilletRadius": 2.375,
             "textEngravingDepth": 0.6,
             "supportY": 7.05,
             "supportZ": 7.05,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 7.05,
@@ -322,14 +353,17 @@
             "extraVerticalSlotDepth": 1.9,
             "totalSlotDepth": 7.4,
             "embedmentY": 16.572441860465,
-            "embedmentZ": 42.372441860465,
+            "embedmentZ": 30.272441860465,
             "extentX": 16.5,
             "funnelFilletRadius": 2.6125,
             "textEngravingDepth": 0.6,
             "supportY": 7.375,
             "supportZ": 7.375,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "5.5\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 7.520759577567,
@@ -356,14 +390,17 @@
             "extraVerticalSlotDepth": 1.98,
             "totalSlotDepth": 7.98,
             "embedmentY": 17.26,
-            "embedmentZ": 45.66,
+            "embedmentZ": 30.96,
             "extentX": 16.5,
             "funnelFilletRadius": 2.85,
             "textEngravingDepth": 0.6,
             "supportY": 7.7,
             "supportZ": 7.7,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "6\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 8.1681013573458,
@@ -390,14 +427,17 @@
             "extraVerticalSlotDepth": 2.31,
             "totalSlotDepth": 9.31,
             "embedmentY": 19.67,
-            "embedmentZ": 53.27,
+            "embedmentZ": 33.37,
             "extentX": 18.635569833807,
             "funnelFilletRadius": 3.325,
             "textEngravingDepth": 0.6,
             "supportY": 8.35,
             "supportZ": 8.35,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "7\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 9.4627849169034,
@@ -424,14 +464,17 @@
             "extraVerticalSlotDepth": 2.64,
             "totalSlotDepth": 10.64,
             "embedmentY": 22.08,
-            "embedmentZ": 60.88,
+            "embedmentZ": 35.78,
             "extentX": 21.224936952922,
             "funnelFilletRadius": 3.8,
             "textEngravingDepth": 0.6,
             "supportY": 9,
             "supportZ": 9,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "8\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 10.757468476461,
@@ -458,14 +501,17 @@
             "extraVerticalSlotDepth": 2.97,
             "totalSlotDepth": 11.97,
             "embedmentY": 24.49,
-            "embedmentZ": 68.49,
+            "embedmentZ": 39.69,
             "extentX": 23.814304072037,
             "funnelFilletRadius": 4.275,
             "textEngravingDepth": 0.6,
             "supportY": 9.65,
             "supportZ": 9.65,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "9\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 12.052152036019,
@@ -492,14 +538,17 @@
             "extraVerticalSlotDepth": 3.3,
             "totalSlotDepth": 13.3,
             "embedmentY": 26.9,
-            "embedmentZ": 76.1,
+            "embedmentZ": 44.1,
             "extentX": 26.403671191153,
             "funnelFilletRadius": 4.75,
             "textEngravingDepth": 0.6,
             "supportY": 10.3,
             "supportZ": 10.3,
             "funnelDraftAngle": 16,
-            "labelTextHeight": 5,
+            "labelTextHeights": [
+                5,
+                5
+            ],
             "labelString": "10\nmm",
             "reservedTextWidth": 16.5,
             "mountingSurfaceOffset": 13.346835595576,
@@ -513,41 +562,525 @@
                 "10",
                 "mm"
             ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 1.27,
+                "shortLegLength": 8.4666666666667,
+                "longLegLength": 21.166666666667,
+                "bendRadius": 4.191,
+                "nominalSize": "1.3 mm"
+            },
+            "holsterHoleDiameter": 1.651,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 3.17,
+            "embedmentY": 6.991,
+            "embedmentZ": 21.6255,
+            "extentX": 16.5,
+            "funnelFilletRadius": 0.60325,
+            "textEngravingDepth": 0.6,
+            "supportY": 4.6255,
+            "supportZ": 4.6255,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "1/20\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 4.6255,
+            "labelPositionZ": 12.6255,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 3.2884962412764,
+            "minimumAllowedMountingSurfaceOffset": 4.6255,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 2,
+            "labelStrings": [
+                "1/20",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 1.5875,
+                "shortLegLength": 10.583333333333,
+                "longLegLength": 26.458333333333,
+                "bendRadius": 5.1439111390063,
+                "nominalSize": "1.6 mm"
+            },
+            "holsterHoleDiameter": 2.06375,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 3.4875,
+            "embedmentY": 7.9439111390063,
+            "embedmentZ": 21.831875,
+            "extentX": 16.5,
+            "funnelFilletRadius": 0.7540625,
+            "textEngravingDepth": 0.6,
+            "supportY": 4.831875,
+            "supportZ": 4.831875,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "1/16\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 4.831875,
+            "labelPositionZ": 12.831875,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 4.1106203015955,
+            "minimumAllowedMountingSurfaceOffset": 4.831875,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 2,
+            "labelStrings": [
+                "1/16",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 1.984375,
+                "shortLegLength": 13.229166666667,
+                "longLegLength": 33.072916666667,
+                "bendRadius": 6.2817032034553,
+                "nominalSize": "2 mm"
+            },
+            "holsterHoleDiameter": 2.5796875,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 3.884375,
+            "embedmentY": 9.0817032034553,
+            "embedmentZ": 22.08984375,
+            "extentX": 16.5,
+            "funnelFilletRadius": 0.942578125,
+            "textEngravingDepth": 0.6,
+            "supportY": 5.08984375,
+            "supportZ": 5.08984375,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "5/64\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 5.08984375,
+            "labelPositionZ": 13.08984375,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 5.1382753769944,
+            "minimumAllowedMountingSurfaceOffset": 5.08984375,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 2,
+            "labelStrings": [
+                "5/64",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 2.38125,
+                "shortLegLength": 15.875,
+                "longLegLength": 39.6875,
+                "bendRadius": 7.3602209797833,
+                "nominalSize": "2.4 mm"
+            },
+            "holsterHoleDiameter": 3.095625,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 4.28125,
+            "embedmentY": 10.160220979783,
+            "embedmentZ": 22.360220979783,
+            "extentX": 16.5,
+            "funnelFilletRadius": 1.13109375,
+            "textEngravingDepth": 0.6,
+            "supportY": 5.3478125,
+            "supportZ": 5.3478125,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "3/32\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 5.3478125,
+            "labelPositionZ": 13.360220979783,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 6.1659304523932,
+            "minimumAllowedMountingSurfaceOffset": 5.3478125,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 2.0124084797833,
+            "labelStrings": [
+                "3/32",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 2.778125,
+                "shortLegLength": 18.520833333333,
+                "longLegLength": 46.302083333333,
+                "bendRadius": 8.3794644679902,
+                "nominalSize": "2.8 mm"
+            },
+            "holsterHoleDiameter": 3.6115625,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 4.678125,
+            "embedmentY": 11.17946446799,
+            "embedmentZ": 23.37946446799,
+            "extentX": 16.5,
+            "funnelFilletRadius": 1.319609375,
+            "textEngravingDepth": 0.6,
+            "supportY": 5.60578125,
+            "supportZ": 5.60578125,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "7/64\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 5.60578125,
+            "labelPositionZ": 14.37946446799,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 7.1935855277921,
+            "minimumAllowedMountingSurfaceOffset": 5.60578125,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 2.7736832179902,
+            "labelStrings": [
+                "7/64",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 3.175,
+                "shortLegLength": 21.166666666667,
+                "longLegLength": 52.916666666667,
+                "bendRadius": 9.3394336680761,
+                "nominalSize": "3.2 mm"
+            },
+            "holsterHoleDiameter": 4.1275,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 5.075,
+            "embedmentY": 12.139433668076,
+            "embedmentZ": 24.339433668076,
+            "extentX": 16.5,
+            "funnelFilletRadius": 1.508125,
+            "textEngravingDepth": 0.6,
+            "supportY": 5.86375,
+            "supportZ": 5.86375,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "1/8\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 5.86375,
+            "labelPositionZ": 15.339433668076,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 8.221240603191,
+            "minimumAllowedMountingSurfaceOffset": 5.86375,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 3.4756836680761,
+            "labelStrings": [
+                "1/8",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 3.571875,
+                "shortLegLength": 23.8125,
+                "longLegLength": 59.53125,
+                "bendRadius": 10.240128580041,
+                "nominalSize": "3.6 mm"
+            },
+            "holsterHoleDiameter": 4.6434375,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 5.471875,
+            "embedmentY": 13.040128580041,
+            "embedmentZ": 25.240128580041,
+            "extentX": 16.5,
+            "funnelFilletRadius": 1.696640625,
+            "textEngravingDepth": 0.6,
+            "supportY": 6.12171875,
+            "supportZ": 6.12171875,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "9/64\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 6.12171875,
+            "labelPositionZ": 16.240128580041,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 9.2488956785899,
+            "minimumAllowedMountingSurfaceOffset": 6.12171875,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 4.118409830041,
+            "labelStrings": [
+                "9/64",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 3.96875,
+                "shortLegLength": 26.458333333333,
+                "longLegLength": 66.145833333333,
+                "bendRadius": 11.081549203885,
+                "nominalSize": "4 mm"
+            },
+            "holsterHoleDiameter": 5.159375,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 5.86875,
+            "embedmentY": 13.881549203885,
+            "embedmentZ": 26.081549203885,
+            "extentX": 16.5,
+            "funnelFilletRadius": 1.88515625,
+            "textEngravingDepth": 0.6,
+            "supportY": 6.3796875,
+            "supportZ": 6.3796875,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "5/32\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 6.3796875,
+            "labelPositionZ": 17.081549203885,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 10.276550753989,
+            "minimumAllowedMountingSurfaceOffset": 6.3796875,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 4.7018617038848,
+            "labelStrings": [
+                "5/32",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 4.7625,
+                "shortLegLength": 31.75,
+                "longLegLength": 79.375,
+                "bendRadius": 12.586567587209,
+                "nominalSize": "4.8 mm"
+            },
+            "holsterHoleDiameter": 6.19125,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 6.6625,
+            "embedmentY": 15.386567587209,
+            "embedmentZ": 27.586567587209,
+            "extentX": 16.5,
+            "funnelFilletRadius": 2.2621875,
+            "textEngravingDepth": 0.6,
+            "supportY": 6.895625,
+            "supportZ": 6.895625,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "3/16\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 6.895625,
+            "labelPositionZ": 18.586567587209,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 12.331860904786,
+            "minimumAllowedMountingSurfaceOffset": 6.895625,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 5.6909425872093,
+            "labelStrings": [
+                "3/16",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 5.55625,
+                "shortLegLength": 37.041666666667,
+                "longLegLength": 92.604166666667,
+                "bendRadius": 13.85448881805,
+                "nominalSize": "5.6 mm"
+            },
+            "holsterHoleDiameter": 7.223125,
+            "extraVerticalSlotDepth": 1.9,
+            "totalSlotDepth": 7.45625,
+            "embedmentY": 16.65448881805,
+            "embedmentZ": 28.85448881805,
+            "extentX": 16.5,
+            "funnelFilletRadius": 2.63921875,
+            "textEngravingDepth": 0.6,
+            "supportY": 7.4115625,
+            "supportZ": 7.4115625,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "7/32\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 7.5935855277921,
+            "labelPositionZ": 19.85448881805,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 14.387171055584,
+            "minimumAllowedMountingSurfaceOffset": 7.5935855277921,
+            "minimumAllowedExtentX": 16.5,
+            "overhangRadius": 6.4429263180497,
+            "labelStrings": [
+                "7/32",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 6.35,
+                "shortLegLength": 42.333333333333,
+                "longLegLength": 105.83333333333,
+                "bendRadius": 15.3035,
+                "nominalSize": "6.4 mm"
+            },
+            "holsterHoleDiameter": 8.255,
+            "extraVerticalSlotDepth": 2.0955,
+            "totalSlotDepth": 8.4455,
+            "embedmentY": 18.1035,
+            "embedmentZ": 30.3035,
+            "extentX": 16.952481206382,
+            "funnelFilletRadius": 3.01625,
+            "textEngravingDepth": 0.6,
+            "supportY": 7.9275,
+            "supportZ": 7.9275,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "1/4\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 8.621240603191,
+            "labelPositionZ": 21.3035,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 16.442481206382,
+            "minimumAllowedMountingSurfaceOffset": 8.621240603191,
+            "minimumAllowedExtentX": 16.952481206382,
+            "overhangRadius": 7.376,
+            "labelStrings": [
+                "1/4",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 7.9375,
+                "shortLegLength": 52.916666666667,
+                "longLegLength": 132.29166666667,
+                "bendRadius": 19.129375,
+                "nominalSize": "7.9 mm"
+            },
+            "holsterHoleDiameter": 10.31875,
+            "extraVerticalSlotDepth": 2.619375,
+            "totalSlotDepth": 10.556875,
+            "embedmentY": 21.929375,
+            "embedmentZ": 35.004375,
+            "extentX": 21.063101507977,
+            "funnelFilletRadius": 3.7703125,
+            "textEngravingDepth": 0.6,
+            "supportY": 8.959375,
+            "supportZ": 8.959375,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "5/16\nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 10.676550753989,
+            "labelPositionZ": 25.129375,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 20.553101507977,
+            "minimumAllowedMountingSurfaceOffset": 10.676550753989,
+            "minimumAllowedExtentX": 21.063101507977,
+            "overhangRadius": 10.17,
+            "labelStrings": [
+                "5/16",
+                "in"
+            ]
+        },
+        {
+            "hexKey": {
+                "widthAcrossFlats": 9.525,
+                "shortLegLength": 63.5,
+                "longLegLength": 158.75,
+                "bendRadius": 22.95525,
+                "nominalSize": "9.5 mm"
+            },
+            "holsterHoleDiameter": 12.3825,
+            "extraVerticalSlotDepth": 3.14325,
+            "totalSlotDepth": 12.66825,
+            "embedmentY": 25.75525,
+            "embedmentZ": 42.00525,
+            "extentX": 25.173721809573,
+            "funnelFilletRadius": 4.524375,
+            "textEngravingDepth": 0.6,
+            "supportY": 9.99125,
+            "supportZ": 9.99125,
+            "funnelDraftAngle": 16,
+            "labelTextHeights": [
+                4,
+                5
+            ],
+            "labelString": "3/8 \nin",
+            "reservedTextWidth": 16.5,
+            "mountingSurfaceOffset": 12.731860904786,
+            "labelPositionZ": 28.95525,
+            "labelTextLineInterval": 6.5,
+            "effectiveHolsterHoleDiameterAtTopOfFunnel": 24.663721809573,
+            "minimumAllowedMountingSurfaceOffset": 12.731860904786,
+            "minimumAllowedExtentX": 25.173721809573,
+            "overhangRadius": 12.964,
+            "labelStrings": [
+                "3/8 ",
+                "in"
+            ]
         }
     ],
     "batchNumber": -1,
     "largestHexKeyHolderSegment": {
         "hexKey": {
-            "widthAcrossFlats": 10,
-            "shortLegLength": 66.666666666667,
-            "longLegLength": 166.66666666667,
-            "bendRadius": 24.1,
-            "nominalSize": "10 mm"
+            "widthAcrossFlats": 9.525,
+            "shortLegLength": 63.5,
+            "longLegLength": 158.75,
+            "bendRadius": 22.95525,
+            "nominalSize": "9.5 mm"
         },
-        "holsterHoleDiameter": 13,
-        "extraVerticalSlotDepth": 3.3,
-        "totalSlotDepth": 13.3,
-        "embedmentY": 26.9,
-        "embedmentZ": 76.1,
-        "extentX": 26.403671191153,
-        "funnelFilletRadius": 4.75,
+        "holsterHoleDiameter": 12.3825,
+        "extraVerticalSlotDepth": 3.14325,
+        "totalSlotDepth": 12.66825,
+        "embedmentY": 25.75525,
+        "embedmentZ": 42.00525,
+        "extentX": 25.173721809573,
+        "funnelFilletRadius": 4.524375,
         "textEngravingDepth": 0.6,
-        "supportY": 10.3,
-        "supportZ": 10.3,
+        "supportY": 9.99125,
+        "supportZ": 9.99125,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
-        "labelString": "10\nmm",
+        "labelTextHeights": [
+            4,
+            5
+        ],
+        "labelString": "3/8 \nin",
         "reservedTextWidth": 16.5,
-        "mountingSurfaceOffset": 13.346835595576,
-        "labelPositionZ": 31.6,
+        "mountingSurfaceOffset": 12.731860904786,
+        "labelPositionZ": 28.95525,
         "labelTextLineInterval": 6.5,
-        "effectiveHolsterHoleDiameterAtTopOfFunnel": 25.893671191153,
-        "minimumAllowedMountingSurfaceOffset": 13.346835595576,
-        "minimumAllowedExtentX": 26.403671191153,
-        "overhangRadius": 13.8,
+        "effectiveHolsterHoleDiameterAtTopOfFunnel": 24.663721809573,
+        "minimumAllowedMountingSurfaceOffset": 12.731860904786,
+        "minimumAllowedExtentX": 25.173721809573,
+        "overhangRadius": 12.964,
         "labelStrings": [
-            "10",
-            "mm"
+            "3/8 ",
+            "in"
         ]
     },
     "smallestHexKeyHolderSegment": {
@@ -569,7 +1102,10 @@
         "supportY": 4.775,
         "supportZ": 4.775,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
+        "labelTextHeights": [
+            5,
+            5
+        ],
         "labelString": "1.5\nmm",
         "reservedTextWidth": 16.5,
         "mountingSurfaceOffset": 4.775,
@@ -585,11 +1121,11 @@
         ]
     },
     "hexKeyHolder": {
-        "hexKeysCount": 14,
+        "hexKeysCount": 27,
         "mountHoles": {
             "screw": {
                 "clearanceDiameter": 5,
-                "headClearanceDiameter": 8.4
+                "headClearanceDiameter": 9
             },
             "clampingMeatThickness": 7,
             "positionZ": -15,
@@ -598,7 +1134,7 @@
                     "x": 108.75
                 },
                 {
-                    "x": 332.92481085877
+                    "x": 575.34406476428
                 }
             ]
         },
@@ -647,95 +1183,98 @@
                 "x": 346.62664645434
             },
             {
-                "x": 368.87848204992
+                "x": 369.07848204992
             },
             {
-                "x": 385.97848204992
+                "x": 386.57848204992
             },
             {
-                "x": 403.07848204992
+                "x": 404.07848204992
             },
             {
-                "x": 420.17848204992
+                "x": 421.57848204992
             },
             {
-                "x": 437.27848204992
+                "x": 439.07848204992
             },
             {
-                "x": 454.37848204992
+                "x": 456.57848204992
             },
             {
-                "x": 471.47848204992
+                "x": 474.07848204992
             },
             {
-                "x": 488.57848204992
+                "x": 491.57848204992
             },
             {
-                "x": 505.67848204992
+                "x": 509.07848204992
             },
             {
-                "x": 522.77848204992
+                "x": 526.57848204992
             },
             {
-                "x": 539.87848204992
+                "x": 544.30472265311
             },
             {
-                "x": 556.97848204992
+                "x": 564.31251401029
             },
             {
-                "x": 574.07848204992
+                "x": 588.43092566907
             },
             {
-                "x": 591.17848204992
+                "x": 610.06778657385
             },
             {
-                "x": 608.27848204992
+                "x": 627.16778657385
             },
             {
-                "x": 625.37848204992
+                "x": 644.26778657385
             },
             {
-                "x": 642.47848204992
+                "x": 661.36778657385
             },
             {
-                "x": 659.57848204992
+                "x": 678.46778657385
             }
         ],
-        "xMax": 359.82848204992
+        "xMax": 601.01778657385
     },
     "extraMountingSurfaceOffset": 0,
     "hexKeyHolderSegment": {
         "hexKey": {
-            "widthAcrossFlats": 10,
-            "shortLegLength": 66.666666666667,
-            "longLegLength": 166.66666666667,
-            "bendRadius": 24.1,
-            "nominalSize": "10 mm"
+            "widthAcrossFlats": 9.525,
+            "shortLegLength": 63.5,
+            "longLegLength": 158.75,
+            "bendRadius": 22.95525,
+            "nominalSize": "9.5 mm"
         },
-        "holsterHoleDiameter": 13,
-        "extraVerticalSlotDepth": 3.3,
-        "totalSlotDepth": 13.3,
-        "embedmentY": 26.9,
-        "embedmentZ": 76.1,
-        "extentX": 26.403671191153,
-        "funnelFilletRadius": 4.75,
+        "holsterHoleDiameter": 12.3825,
+        "extraVerticalSlotDepth": 3.14325,
+        "totalSlotDepth": 12.66825,
+        "embedmentY": 25.75525,
+        "embedmentZ": 42.00525,
+        "extentX": 25.173721809573,
+        "funnelFilletRadius": 4.524375,
         "textEngravingDepth": 0.6,
-        "supportY": 10.3,
-        "supportZ": 10.3,
+        "supportY": 9.99125,
+        "supportZ": 9.99125,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
-        "labelString": "10\nmm",
+        "labelTextHeights": [
+            4,
+            5
+        ],
+        "labelString": "3/8 \nin",
         "reservedTextWidth": 16.5,
-        "mountingSurfaceOffset": 13.346835595576,
-        "labelPositionZ": 31.6,
+        "mountingSurfaceOffset": 12.731860904786,
+        "labelPositionZ": 28.95525,
         "labelTextLineInterval": 6.5,
-        "effectiveHolsterHoleDiameterAtTopOfFunnel": 25.893671191153,
-        "minimumAllowedMountingSurfaceOffset": 13.346835595576,
-        "minimumAllowedExtentX": 26.403671191153,
-        "overhangRadius": 13.8,
+        "effectiveHolsterHoleDiameterAtTopOfFunnel": 24.663721809573,
+        "minimumAllowedMountingSurfaceOffset": 12.731860904786,
+        "minimumAllowedExtentX": 25.173721809573,
+        "overhangRadius": 12.964,
         "labelStrings": [
-            "10",
-            "mm"
+            "3/8 ",
+            "in"
         ]
     },
     "minimumAllowedHexKeyIntervalX": 20,
@@ -755,14 +1294,17 @@
         "extraVerticalSlotDepth": 1.98,
         "totalSlotDepth": 7.98,
         "embedmentY": 17.26,
-        "embedmentZ": 45.66,
+        "embedmentZ": 26.46,
         "extentX": 16.1,
         "funnelFilletRadius": 2.85,
         "textEngravingDepth": 0.6,
         "supportY": 7.7,
         "supportZ": 7.7,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
+        "labelTextHeights": [
+            5,
+            5
+        ],
         "labelString": "6\nmm",
         "reservedTextWidth": 16.1,
         "mountingSurfaceOffset": 8.1681013573458,
@@ -789,14 +1331,17 @@
         "extraVerticalSlotDepth": 1.98,
         "totalSlotDepth": 7.98,
         "embedmentY": 17.26,
-        "embedmentZ": 45.66,
+        "embedmentZ": 26.46,
         "extentX": 16.1,
         "funnelFilletRadius": 2.85,
         "textEngravingDepth": 0.6,
         "supportY": 7.7,
         "supportZ": 7.7,
         "funnelDraftAngle": 16,
-        "labelTextHeight": 5,
+        "labelTextHeights": [
+            5,
+            5
+        ],
         "labelString": "6\nmm",
         "reservedTextWidth": 16.1,
         "mountingSurfaceOffset": 8.1681013573458,
@@ -811,5 +1356,6 @@
             "mm"
         ]
     },
+    "drillOutSizeGuide": "1.5mm    4.9/64 inch\n2mm    6.6/64 inch\n2.5mm    8.2/64 inch\n3mm    9.8/64 inch\n3.5mm    11.5/64 inch\n4mm    13.1/64 inch\n4.5mm    14.7/64 inch\n5mm    16.4/64 inch\n5.5mm    18/64 inch\n6mm    19.7/64 inch\n7mm    22.9/64 inch\n8mm    26.2/64 inch\n9mm    29.5/64 inch\n10mm    32.8/64 inch\n1/20in    4.2/64 inch\n1/16in    5.2/64 inch\n5/64in    6.5/64 inch\n3/32in    7.8/64 inch\n7/64in    9.1/64 inch\n1/8in    10.4/64 inch\n9/64in    11.7/64 inch\n5/32in    13/64 inch\n3/16in    15.6/64 inch\n7/32in    18.2/64 inch\n1/4in    20.8/64 inch\n5/16in    26/64 inch\n3/8 in    31.2/64 inch\n",
     "php_errormsg": "Creating default object from empty value"
 }
