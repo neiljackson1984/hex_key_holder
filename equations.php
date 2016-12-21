@@ -536,8 +536,11 @@ $drillOutSizeGuide = "";
 foreach($hexKeyHolderSegments as $hexKeyHolderSegment)
 {
 	$drillOutSizeGuide .= 
-		str_replace("\n","",$hexKeyHolderSegment->labelString) . "    " . round(($hexKeyHolderSegment->holsterHoleDiameter / $inch) * 64 , 1) . "/64 inch" . "\n" . 
+		str_replace("\n","",$hexKeyHolderSegment->labelString) . "    " . 
+		//round(($hexKeyHolderSegment->holsterHoleDiameter / $inch) * 64 , 1) . "/64 inch" . "\n" . 
+		round(($hexKeyHolderSegment->holsterHoleDiameter / $inch) , 3) . " inch holsterHoleDiameter" . "\n" . 
 		"";
 }
+echo $drillOutSizeGuide;
 
 ?>
